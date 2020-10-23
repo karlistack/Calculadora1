@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,22 +9,47 @@
 
     <EditText
         android:id="@+id/pantalla"
-        android:layout_width="match_parent"
-        android:layout_height="367dp"
+        android:layout_width="417dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="3dp"
         android:autofillHints=""
         android:background="@color/white"
         android:ems="10"
         android:gravity="end"
-        android:inputType="textPersonName"
+        android:inputType="numberSigned|numberDecimal"
         android:text="0"
         android:textAlignment="textEnd"
         android:textColor="@color/black"
         android:textSize="50pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,RtlHardcoded" />
 
+    <EditText
+        android:id="@+id/barradeanterior"
+        android:layout_width="406dp"
+        android:layout_height="174dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="resultado"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pantalla"
+
+
+        android:gravity="end" />
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
-        android:layout_height="288dp">
+        android:layout_height="288dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="368dp"
+        tools:ignore="MissingConstraints">
 
         <TableRow
             android:layout_width="match_parent"
@@ -47,7 +73,7 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-
+                android:onClick="signo"
                 android:background="@color/botones_numero"
                 android:text="+/-"
                 tools:ignore="ButtonStyle,HardcodedText" />
@@ -61,6 +87,7 @@
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
                 android:text="anterior"
+                android:onClick="patras"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -72,6 +99,7 @@
                 android:layout_weight="1"
                 android:background="@color/botones_calculo"
                 android:text="="
+                android:onClick="igualalo"
                 tools:ignore="ButtonStyle,HardcodedText" />
         </TableRow>
 
@@ -87,6 +115,7 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
+                android:onClick="pulsarboton7"
                 android:text="7"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
@@ -97,7 +126,7 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-
+                android:onClick="pulsarbotonocho"
                 android:background="@color/botones_numero"
                 android:text="8"
                 tools:ignore="ButtonStyle,HardcodedText" />
@@ -111,6 +140,7 @@
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
                 android:text="9"
+                android:onClick="pulsarboton9"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -122,6 +152,7 @@
                 android:layout_weight="1"
                 android:background="@color/botones_calculo"
                 android:text="x"
+                android:onClick="multiplicalo"
                 tools:ignore="ButtonStyle,HardcodedText" />
         </TableRow>
 
@@ -138,6 +169,7 @@
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
                 android:text="4"
+                android:onClick="pulsarboton4"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -147,7 +179,7 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-
+                android:onClick="pulsarboton5"
                 android:background="@color/botones_numero"
                 android:text="5"
                 tools:ignore="ButtonStyle,HardcodedText" />
@@ -161,6 +193,7 @@
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
                 android:text="6"
+                android:onClick="pulsarboton6"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -188,6 +221,7 @@
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
                 android:text="1"
+                android:onClick="pulsarelboton1"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -197,7 +231,7 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-
+                android:onClick="pulsarelboton2"
                 android:background="@color/botones_numero"
                 android:text="2"
                 tools:ignore="ButtonStyle,HardcodedText" />
@@ -211,7 +245,10 @@
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
                 android:text="3"
-                tools:ignore="ButtonStyle,HardcodedText" />
+                android:onClick="pulsarelboton3"
+                tools:ignore="ButtonStyle,HardcodedText"
+
+                />
 
             <Button
                 android:id="@+id/sumar"
@@ -222,6 +259,7 @@
                 android:layout_weight="1"
                 android:background="@color/botones_calculo"
                 android:text="+"
+                android:onClick="pulsarsuma"
                 tools:ignore="ButtonStyle,HardcodedText" />
         </TableRow>
 
@@ -231,7 +269,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="-55dp"
+        tools:layout_editor_absoluteY="658dp"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/cero"
@@ -242,6 +283,7 @@
             android:layout_weight="1"
             android:background="@color/botones_numero"
             android:text="0"
+            android:onClick="pulsarelboton0"
             tools:ignore="ButtonStyle,HardcodedText" />
 
         <Button
@@ -253,6 +295,7 @@
             android:layout_weight="1"
             android:background="@color/botones_numero"
             android:text=","
+            android:onClick="ponenlacoma"
             tools:ignore="ButtonStyle,HardcodedText" />
 
         <Button
@@ -264,11 +307,13 @@
             android:layout_weight="1"
             android:background="@color/botones_calculo"
             android:text="/"
+            android:onClick="dividelo"
             tools:ignore="ButtonStyle,HardcodedText">
 
         </Button>
     </LinearLayout>
 
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
