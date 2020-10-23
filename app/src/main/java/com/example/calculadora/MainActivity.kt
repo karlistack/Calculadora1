@@ -3,22 +3,33 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import com.example.calculadora.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    lateinit var textoIN :TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding  = ActivityMainBinding.inflate(layoutInflater)
-        var view = binding.root
-        setContentView(view)
+         binding  = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        //usando binding
+
+    binding.uno.setOnClickListener(){
+        Toast.makeText(this@MainActivity, binding.uno.text,Toast.LENGTH_SHORT).show()
     }
 
 
 
-//AHora podemoso acceder al los id de xml sin problema
+    }
+
+
 
 
     fun pulsarelboton1(view: View) {

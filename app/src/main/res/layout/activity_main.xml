@@ -9,9 +9,10 @@
 
     <EditText
         android:id="@+id/pantalla"
-        android:layout_width="417dp"
-        android:layout_height="191dp"
+        android:layout_width="412dp"
+        android:layout_height="143dp"
         android:layout_marginTop="3dp"
+        android:layout_marginBottom="8dp"
         android:autofillHints=""
         android:background="@color/white"
         android:ems="10"
@@ -21,6 +22,7 @@
         android:textAlignment="textEnd"
         android:textColor="@color/black"
         android:textSize="50pt"
+        app:layout_constraintBottom_toTopOf="@+id/barradeanterior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,27 +30,29 @@
 
     <EditText
         android:id="@+id/barradeanterior"
-        android:layout_width="406dp"
-        android:layout_height="174dp"
+        android:layout_width="412dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
+        android:gravity="end"
         android:inputType="textPersonName"
         android:text="resultado"
         android:textAlignment="textEnd"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pantalla"
+        app:layout_constraintTop_toBottomOf="@+id/pantalla" />
 
-
-        android:gravity="end" />
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="288dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="368dp"
         tools:ignore="MissingConstraints">
 
         <TableRow
@@ -73,8 +77,8 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-                android:onClick="signo"
                 android:background="@color/botones_numero"
+                android:onClick="signo"
                 android:text="+/-"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
@@ -86,8 +90,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
-                android:text="anterior"
                 android:onClick="patras"
+                android:text="anterior"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -98,8 +102,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_calculo"
-                android:text="="
                 android:onClick="igualalo"
+                android:text="="
                 tools:ignore="ButtonStyle,HardcodedText" />
         </TableRow>
 
@@ -114,7 +118,7 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-                android:background="@color/botones_numero"
+                android:background="?attr/colorAccent"
                 android:onClick="pulsarboton7"
                 android:text="7"
                 tools:ignore="ButtonStyle,HardcodedText" />
@@ -126,8 +130,8 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-                android:onClick="pulsarbotonocho"
                 android:background="@color/botones_numero"
+                android:onClick="pulsarbotonocho"
                 android:text="8"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
@@ -139,8 +143,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
-                android:text="9"
                 android:onClick="pulsarboton9"
+                android:text="9"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -151,8 +155,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_calculo"
-                android:text="x"
                 android:onClick="multiplicalo"
+                android:text="x"
                 tools:ignore="ButtonStyle,HardcodedText" />
         </TableRow>
 
@@ -168,8 +172,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
-                android:text="4"
                 android:onClick="pulsarboton4"
+                android:text="4"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -179,8 +183,8 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-                android:onClick="pulsarboton5"
                 android:background="@color/botones_numero"
+                android:onClick="pulsarboton5"
                 android:text="5"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
@@ -192,8 +196,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
-                android:text="6"
                 android:onClick="pulsarboton6"
+                android:text="6"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -220,8 +224,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
-                android:text="1"
                 android:onClick="pulsarelboton1"
+                android:text="1"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
@@ -231,8 +235,8 @@
                 android:layout_marginEnd="2pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-                android:onClick="pulsarelboton2"
                 android:background="@color/botones_numero"
+                android:onClick="pulsarelboton2"
                 android:text="2"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
@@ -244,8 +248,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_numero"
-                android:text="3"
                 android:onClick="pulsarelboton3"
+                android:text="3"
                 tools:ignore="ButtonStyle,HardcodedText"
 
                 />
@@ -258,8 +262,8 @@
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
                 android:background="@color/botones_calculo"
-                android:text="+"
                 android:onClick="pulsarsuma"
+                android:text="+"
                 tools:ignore="ButtonStyle,HardcodedText" />
         </TableRow>
 
@@ -267,12 +271,13 @@
     </TableLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="-55dp"
-        tools:layout_editor_absoluteY="658dp"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-55dp">
 
         <Button
             android:id="@+id/cero"
@@ -282,20 +287,20 @@
             android:layout_marginRight="2pt"
             android:layout_weight="1"
             android:background="@color/botones_numero"
-            android:text="0"
             android:onClick="pulsarelboton0"
+            android:text="0"
             tools:ignore="ButtonStyle,HardcodedText" />
 
         <Button
             android:id="@+id/lacoma"
-            android:layout_width="15pt"
+            android:layout_width="55dp"
             android:layout_height="30pt"
             android:layout_marginEnd="2pt"
             android:layout_marginRight="2pt"
             android:layout_weight="1"
             android:background="@color/botones_numero"
-            android:text=","
             android:onClick="ponenlacoma"
+            android:text=","
             tools:ignore="ButtonStyle,HardcodedText" />
 
         <Button
@@ -306,8 +311,8 @@
             android:layout_marginRight="2pt"
             android:layout_weight="1"
             android:background="@color/botones_calculo"
-            android:text="/"
             android:onClick="dividelo"
+            android:text="/"
             tools:ignore="ButtonStyle,HardcodedText">
 
         </Button>
