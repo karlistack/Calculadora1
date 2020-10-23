@@ -3,16 +3,25 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.calculadora.databinding.ActivityMainBinding
+
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding  = ActivityMainBinding.inflate(layoutInflater)
+        var view = binding.root
+        setContentView(view)
     }
 
+
+
+//AHora podemoso acceder al los id de xml sin problema
+
+
     fun pulsarelboton1(view: View) {
-        EditText.
     }
     fun pulsarelboton2(view: View) {}
     fun pulsarelboton3(view: View) {}
