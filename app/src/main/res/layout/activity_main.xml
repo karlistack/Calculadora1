@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/pantalla"
+        android:layout_width="match_parent"
+        android:layout_height="367dp"
+        android:autofillHints=""
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="50pt"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="288dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/borra"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="BORRA"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/negativopostivo"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+
+                android:background="@color/botones_numero"
+                android:text="+/-"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/anterior"
+                android:layout_width="53dp"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="anterior"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/igual"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="="
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/siete"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="7"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/ocho"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+
+                android:background="@color/botones_numero"
+                android:text="8"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/nueve"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="9"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/multplicacion"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="x"
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/cuatro"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="4"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/cinco"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+
+                android:background="@color/botones_numero"
+                android:text="5"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/seis"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="6"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/restar"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="-"
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="156dp">
+
+            <Button
+                android:id="@+id/uno"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="1"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/dos"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+
+                android:background="@color/botones_numero"
+                android:text="2"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/tres"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="3"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/sumar"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="+"
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cero"
+            android:layout_width="134dp"
+            android:layout_height="30pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:background="@color/botones_numero"
+            android:text="0"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/lacoma"
+            android:layout_width="15pt"
+            android:layout_height="30pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:background="@color/botones_numero"
+            android:text=","
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/divison"
+            android:layout_width="15pt"
+            android:layout_height="30pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:background="@color/botones_calculo"
+            android:text="/"
+            tools:ignore="ButtonStyle,HardcodedText">
+
+        </Button>
+    </LinearLayout>
+
+
+</LinearLayout>
+
